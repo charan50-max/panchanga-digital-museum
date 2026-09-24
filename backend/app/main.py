@@ -18,19 +18,16 @@ app = FastAPI(
 
 app.add_middleware(
     CORSMiddleware,
+
+    # Main production Vercel URL
     allow_origins=[
-        # Production Vercel deployment
         "https://panchanga-digital-museum.vercel.app",
-
-        # Vercel Git/preview deployment
-        "https://panchanga-digital-museum-git-main-charan50-maxs-projects.vercel.app",
-
-        # Current Vercel preview deployment
-        "https://panchanga-digital-museum-d1dss9m-charan50-maxs-projects.vercel.app",
-
-        # Local development
         "http://localhost:5173",
     ],
+
+    # Allow Vercel preview deployments
+    allow_origin_regex=r"https://panchanga-digital-museum-[a-z0-9-]+-charan50-maxs-projects\.vercel\.app",
+
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
