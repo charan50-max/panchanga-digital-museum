@@ -1,4 +1,4 @@
-const API_BASE_URL = "https://panchanga-digital-museum.onrender.com/";
+const API_BASE_URL = "https://panchanga-digital-museum.onrender.com";
 
 export async function getPanchanga({
   date,
