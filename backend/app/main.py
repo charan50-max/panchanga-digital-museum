@@ -20,7 +20,10 @@ app.add_middleware(
     CORSMiddleware,
     allow_origins=[
         # Production Vercel deployment
-        "https://panchanga-digital-museum-git-main-charan50-maxs-projects.vercel.app/",
+        "https://panchanga-digital-museum.vercel.app",
+
+        # Vercel Git/preview deployment
+        "https://panchanga-digital-museum-git-main-charan50-maxs-projects.vercel.app",
 
         # Current Vercel preview deployment
         "https://panchanga-digital-museum-d1dss9m-charan50-maxs-projects.vercel.app",
@@ -47,7 +50,3 @@ app.include_router(
     panchanga.router,
     prefix="/api",
 )
-    return {
-        "message": "Panchāṅga Digital Museum API",
-        "status": "running",
-    }
