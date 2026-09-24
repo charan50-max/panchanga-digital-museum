@@ -15,7 +15,7 @@ app = FastAPI(
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
-        "http://localhost:5173"
+        "https://panchanga-digital-museum.vercel.app/"
     ],
     allow_credentials=True,
     allow_methods=["*"],
